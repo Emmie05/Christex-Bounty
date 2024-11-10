@@ -1,4 +1,0 @@
-## CHRISTEX FOUNDATION BOUNTIES 
-
-
-##### Emm 😊✌️
