@@ -1,5 +1,7 @@
 # Technical Deep Dive: How Tiplink Works
 
+![Tiplink](tiplink.webp)
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Overview of Tiplink](#overview-of-tiplink)
