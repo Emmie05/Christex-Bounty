@@ -5,6 +5,8 @@ use solana_program::{
     msg,
     program_error::ProgramError,
     pubkey::Pubkey,
+    program::invoke,
+    system_instruction,
 };
 
 entrypoint!(process_instruction);
@@ -32,11 +34,17 @@ fn process_instruction(
     let royalty_amount = amount * royalty_percentage / 100;
 
     // Transfer royalty amount to the royalty receiver
-    // ...existing code to transfer royalty_amount from from_account to royalty_receiver_account...
+    invoke(
+        &system_instruction::transfer(from_account.key, royalty_receiver_account.key, royalty_amount),
+        &[from_account.clone(), royalty_receiver_account.clone()],
+    )?;
 
     // Transfer the remaining amount to the recipient
     let remaining_amount = amount - royalty_amount;
-    // ...existing code to transfer remaining_amount from from_account to to_account...
+    invoke(
+        &system_instruction::transfer(from_account.key, to_account.key, remaining_amount),
+        &[from_account.clone(), to_account.clone()],
+    )?;
 
     Ok(())
 }

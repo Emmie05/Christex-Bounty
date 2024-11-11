@@ -1,13 +1,25 @@
-# TokenWithHooks
+# CHRISTEX FOUNDATION
+
+## Transfer Hooks
 
 This project implements a token with transfer hooks to enforce custom logic, such as on-chain royalties.
 
-## Prerequisites
+![TokenWithHooks](transfer-hook.webp)
+
+### Author
+
+Emmanuel Forster
+
+### Task
+
+Create a token that uses transfer hooks to enforce custom logic, such as on-chain royalties.
+
+### Prerequisites
 
 - [Solana CLI](https://solana.com/docs/getting-started/installation)
 - [Rust](https://www.rust-lang.org/tools/install)
 
-## Setup
+### Setup
 
 1. Clone the repository:
     ```bash
@@ -20,27 +32,23 @@ This project implements a token with transfer hooks to enforce custom logic, suc
     cargo build-bpf
     ```
 
-## Deployment
+### Deployment
 
 1. Deploy the contract:
     ```bash
     ./scripts/deploy.sh
     ```
 
-## Testing
+### Testing
 
 1. Run the tests:
     ```bash
     cargo test-bpf
     ```
 
-## Interaction
+### Interaction
 
 1. Interact with the deployed contract:
     ```bash
     ./scripts/interact.sh
     ```
-
-## License
-
-This project is licensed under the MIT License.
