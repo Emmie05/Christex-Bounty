@@ -36,7 +36,7 @@ Create a token that uses transfer hooks to enforce custom logic, such as on-chai
 
 1. Deploy the contract:
     ```bash
-    ./scripts/deploy.sh
+    solana program deploy /TokenWithHooks.so
     ```
 
 ### Testing
@@ -50,5 +50,5 @@ Create a token that uses transfer hooks to enforce custom logic, such as on-chai
 
 1. Interact with the deployed contract:
     ```bash
-    ./scripts/interact.sh
+    solana transfer --from <from_account> --to <to_account> --amount 100 --program-id <program_id>
     ```
