@@ -22,7 +22,7 @@ fn process_instruction(
     let to_account = next_account_info(accounts_iter)?;
     let royalty_receiver_account = next_account_info(accounts_iter)?;
 
-    // Parse the transfer amount from instruction data
+    // Parse the transfer amount from instruction_data
     let amount = instruction_data
         .get(..8)
         .and_then(|slice| slice.try_into().ok())
