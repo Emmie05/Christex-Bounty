@@ -23,8 +23,8 @@ Create a token that uses transfer hooks to enforce custom logic, such as on-chai
 
 1. Clone the repository:
     ```bash
-    git clone <repository_url>
-    cd christex-bounty
+    git clone https://github.com/Emmie05/Christex-Bounty.git
+    cd transfer-hooks
     ```
 
 2. Build the contract:
